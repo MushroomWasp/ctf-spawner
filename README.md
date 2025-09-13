@@ -28,6 +28,13 @@ A Flask-based API server that automates instance management:
 
 ---
 
+## Setup
+
+Put **`script.sh`** and **`server.py`** in the **root of your app**, where your `docker-compose.yml` file exists.  
+This ensures the scripts can properly manage the Docker Compose services.
+
+---
+
 ## API Endpoints
 
 ### `POST /spawn`
@@ -93,3 +100,4 @@ curl -X POST http://localhost:8484/spawn \
 * When a new one is spawned, the old one is removed automatically.
 * Designed for **ephemeral lab/CTF setups**, not for production.
 
+---
